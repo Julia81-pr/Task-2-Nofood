@@ -1,19 +1,13 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Bmi service = new Bmi();
-        Scanner x = new Scanner(System.in);
-        System.out.println("Enter your weight: ");
-        double weight = x.nextDouble();
-
-        System.out.println("Enter your height: ");
-        double height = x.nextDouble();
-
-        double index = service.calculate(weight, height);
-        System.out.println("Your body mass index is: " + index);
-
-
-
-
+        BonusMilesService service = new BonusMilesService();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите стоимость билета:");
+        int price = sc.nextInt();
+        int miles = service.calculate(price,20);
+        System.out.println("Полученные мили: " + miles);
     }
 }
+
+//
